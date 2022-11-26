@@ -1,0 +1,45 @@
+{
+  "name": "Ecomm API",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/init.js",
+    "test-lint": "eslint ./lib",
+    "test-mocha": "mocha --exit tests/**/*",
+    "test-mocha-with-coverage": "nyc npm run test-mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.2.0",
+    "helmet": "^4.6.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.0.13",
+    "winston": "^3.3.3",
+    "node-schedule": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+  "jsonwebtoken": "^8.5.1",
+    "hiroki": "^0.2.9"
+  },
+  "devDependencies": {
+    "eslint": "8.3.0",
+    "eslint-formatter-checkstyle-relative-paths": "^1.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0",
+    "should": "^13.2.3",
+    "supertest": "^6.1.6"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@lib": "./lib/",
+    "@logger": "./lib/logger.js",
+    "@utils": "./lib/utils/",
+    "@middlewares": "./lib/utils/middlewares/",
+    "@decorators-utils": "./lib/utils/decorators/",
+    "@models": "./lib/models/"
+  }
+}
