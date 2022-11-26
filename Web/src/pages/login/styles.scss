@@ -1,0 +1,88 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+
+  .login-side {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-box {
+      width: 55%;
+
+      &.error {
+        span {
+          position: relative;
+
+          &::after {
+            content: '*';
+            font-weight: bold;
+            color: var(--error);
+            margin-left: 2px;
+            line-height: 5px;
+          }
+        }
+
+        input {
+          border-color: var(--error);
+        }
+      }
+
+      .brand {
+        width: 100%;
+        height: 2.7rem;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .btn-gral {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .lateral {
+    width: 60%;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+}
+
+@media(max-width: 1500px){
+  .login-page{
+    .login-side{
+      width: 55%;
+    }
+
+    .login-box{
+      width: 45%;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .login-page {
+    padding: 1.5rem;
+
+    .login-side {
+      width: 100%;
+
+      .login-box {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+
+    .lateral {
+      display: none;
+    }
+  }
+}

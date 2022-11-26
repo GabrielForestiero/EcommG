@@ -1,0 +1,15 @@
+.footer-component{
+    text-align: center;
+    line-height: 3rem;
+    background-color: #eee;
+    height: 3rem;
+    font-size: .7rem;
+    color: gray;
+    padding-left: 18rem;
+}
+
+@media(max-width:992px){
+    .footer-component{
+        padding-left: 0;
+    }
+}

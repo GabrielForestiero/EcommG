@@ -1,0 +1,153 @@
+.user-registration {
+  .content-form {
+    width: 70%;
+    max-width: 550px;
+    margin: 12vh auto 2rem auto;
+
+    &.user-created-successful {
+      form {
+        display: none;
+      }
+
+      .generated-password-box {
+        display: flex;
+      }
+    }
+
+    form {
+      display: block;
+
+      .line-form {
+        margin-bottom: 2rem;
+      }
+
+      .btn-gral {
+        width: 100%;
+      }
+    }
+
+    .generated-password-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+
+      .copy-box {
+        position: relative;
+        width: 80%;
+
+        input {
+          font-size: 1.7rem;
+          border: 1px solid rgb(224, 224, 224);
+          width: 100%;
+          text-align: center;
+          padding: .5rem 1rem;
+          border-radius: 5px;
+          display: block;
+          margin: 0 auto;
+        }
+
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          margin-left: .5rem;
+          cursor: pointer;
+          transition: 0.15s ease-in-out all;
+          position: absolute;
+          right: -2.5rem;
+          top: 0.8rem;
+
+          &:active {
+            transform: scale(0.9);
+          }
+
+          img {
+            width: 1.4rem;
+          }
+        }
+
+        .copied {
+          position: absolute;
+          right: -6.1rem;
+          top: 1rem;
+          color: rgb(107, 180, 107);
+          font-size: .9rem;
+          opacity: 0;
+
+          &.copied-successful {
+            animation: fadeIn 2s ease-in-out forwards;
+          }
+        }
+      }
+
+      span.msg {
+        color: #b5b5b5;
+        font-size: 0.7rem;
+        margin-top: 0.4rem;
+      }
+
+      a.btn-gral {
+        text-decoration: none;
+        text-align: center;
+        margin-top: 3rem;
+        width: 50%;
+        pointer-events: none;
+        background-color: gray;
+
+        &.copied-successful {
+          background-color: var(--highlight-color);
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@media(max-width: 992px) {
+  .user-registration {
+    .content-form {
+      width: 100%;
+      padding: 0 1rem;
+
+      .generated-password-box {
+        .copy-box {
+          margin: 0 auto 0 0;
+          width: calc(100% - 2rem);
+
+          .copied {
+            left: 47%;
+            top: 5.3rem;
+            font-size: .7rem;
+            right: initial;
+          }
+        }
+
+        a.btn-gral {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
